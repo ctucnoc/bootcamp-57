@@ -1,0 +1,17 @@
+server:
+  port: 9080
+  
+spring:
+  application:
+    name: bcp-config-server
+    
+#Configuracion Local
+
+  profiles:
+    active: native
+    
+  cloud:
+    config:
+      server: 
+        native:
+          searchLocations: file:///C:/Users/crist/Documents/workspace-spring-tool-suite-4-4.22.0.RELEASE/proyecto-nttdata/bootcamp-57/bcp-config-data

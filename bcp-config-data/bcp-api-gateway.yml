@@ -1,0 +1,51 @@
+## Puerto de Ejecución
+server:
+  port: 9082
+
+## Registry Client
+eureka:
+   instance:
+      hostname: localhost
+      port: 8761
+   client:
+        serviceUrl:
+           defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka
+
+## Mapeo de Micro Servicios
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+              allowedOrigins: "*"
+              allowedMethods: "*"
+              allowedHeaders: "*" 
+      routes:
+      - id: id-bcp-client
+        uri: lb://BCP-CLIENT
+        predicates:
+        - Path=/bcp-client/**
+        filters:         
+        - RewritePath=/bcp-client/(?<path>.*), /$\{path}
+        
+# Activacion de endpoints         
+management:
+     endpoints:
+       web:
+         exposure:
+           include: '*'
+     endpoint:
+       health:
+         show-details: always
+# Activar Logs
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.web: DEBUG

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: bcp-register-server
+  config:
+      import: "configserver:http://localhost:9080"

@@ -1,0 +1,21 @@
+## Puerto de Ejecución
+server:
+  port: 9093
+  #servlet:
+    #context-path: /ms-rent-location
+
+## Configuración de la BD
+spring:
+  data:
+    mongodb:
+      database: bd_product
+      host: localhost
+      port: 27017
+
+eureka:
+   instance:
+      hostname: localhost
+      port: 8761
+   client:
+        serviceUrl:
+           defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka
