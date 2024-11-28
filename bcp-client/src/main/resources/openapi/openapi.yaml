@@ -1,0 +1,119 @@
+openapi: 3.0.3
+info:
+  title: Banco API
+  version: 1.0.0
+  description: Proyecto BootCamp 57 - banco apis
+  contact:
+    email: ctc.tucno@gmail.com
+
+tags:
+  - name: CustomerNaturalController
+    description: Gestionar los controladores de los clientes naturales
+  - name: CustomerBusinessController
+    description: Gestionar los controladores de los clientes naturales
+
+paths:
+  /api/v1/customer-naturals/{id}:
+    get:
+      summary: Obtener cliente natural por id
+      tags: 
+        - CustomerNaturalController
+      description: Obtener cliente natural por id.
+      operationId: findByIdCustomerNatural
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Id del cliente natural
+      responses:
+        '200':
+          description: Cliente natural encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NaturalCustomerDTO'
+        '404':
+          description: cliente natural no encontrada
+  /api/v1/customer-busineses/{id}:
+    get:
+      summary: Obtener cliente empresarial por id
+      tags: 
+        - CustomerBusinessController
+      description: Obtener cliente empresarial por id.
+      operationId: findByIdCustomerBusineses
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Id del cliente empresarial
+      responses:
+        '200':
+          description: Cliente empresarial encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessCustomerDTO'
+        '404':
+          description: cliente natural no encontrada
+components:
+  schemas:
+    NaturalCustomerDTO:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Identificador único de cliente natural
+        email:
+          type: string
+          description: correo del cliente
+        address:
+          type: string
+          description: dirección del cliente
+        phoneNumber:
+          type: string
+          description: número de teléfono
+        name:
+          type: string
+          description: nombre del cliente
+        fullName:
+          type: string
+          description: apellidos del cliente
+        genero:
+          type: string
+          description: genero del cliente
+      required:
+        - id
+        - name
+        - fullName
+    BusinessCustomerDTO:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Identificador único de cliente natural
+        email:
+          type: string
+          description: correo del cliente
+        address:
+          type: string
+          description: dirección del cliente
+        phoneNumber:
+          type: string
+          description: número de teléfono
+        businessName:
+          type: string
+          description: nombre de la empresa
+        ruc:
+          type: string
+          description: ruc de la empresa
+        sector:
+          type: string
+          description: rubro del negocio
+      required:
+        - id
+        - businessName
+        - ruc

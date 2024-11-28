@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: bcp-client
+  config:
+      import: "configserver:http://localhost:9080"
