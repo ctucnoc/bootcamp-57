@@ -31,6 +31,42 @@
 		<java.version>21</java.version>
 		<spring-cloud.version>2024.0.0-RC1</spring-cloud.version>
 		<springdoc-openapi-starter-webflux-ui.version>2.1.0</springdoc-openapi-starter-webflux-ui.version>
+
+		<!-- Logging -->
+		<logback.jackson.version>0.1.5</logback.jackson.version>
+		<logstash-logback-encoder.version>7.0.1</logstash-logback-encoder.version>
+		<ch.qos.logback.version>1.2.10</ch.qos.logback.version>
+
+		<!-- test -->
+		<cucumber.version>7.2.1</cucumber.version>
+		<mockito-junit-jupiter.version>4.3.1</mockito-junit-jupiter.version>
+		<junit-platform-suite.version>1.8.2</junit-platform-suite.version>
+		<wiremock.version>2.27.2</wiremock.version>
+
+		<!-- JACOCO / SONAR plugins -->
+		<jacoco-maven-plugin.version>0.8.7</jacoco-maven-plugin.version>
+		<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
+		<maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
+		<sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
+		<!-- sonar -->
+		<onar.host.url>http://localhost:9000</onar.host.url>
+		<sonar.login>b0558e6b7b96b69c19f0a6a0aa1ec4290212eeaf</sonar.login>
+		<sonar.sources>${project.basedir}/src/main/</sonar.sources>
+		<sonar.tests>${project.basedir}/src/test/</sonar.tests>
+		<sonar.java.codeCoveragePlugin>jacoco</sonar.java.codeCoveragePlugin>
+		<sonar.jacoco.reportPaths>
+			${project.build.directory}/coverage-reports/jacoco-ut.exec,
+			${project.build.directory}/coverage-reports/jacoco-it.exec,
+			${project.build.directory}/coverage-reports/jacoco-at.exec
+		</sonar.jacoco.reportPaths>
+		<sonar.junit.reportPaths>
+			${project.build.directory}/surefire-reports
+			${project.build.directory}/failsafe-reports
+		</sonar.junit.reportPaths>
+		<sonar.exclusions>
+			**/*Application.java,
+		</sonar.exclusions>
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -84,12 +120,19 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>3.0.0</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
 		<dependency>
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 			<version>2.0.1.Final</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -110,6 +153,33 @@
 			<artifactId>jackson-databind-nullable</artifactId>
 			<version>0.2.6</version>
 		</dependency>
+		<!-- ======= -->
+		<!-- Logging -->
+		<!-- ======= -->
+
+
+		<dependency>
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-suite</artifactId>
+			<version>${junit-platform-suite.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<version>${mockito-junit-jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- wiremock -->
+		<dependency>
+			<groupId>com.github.tomakehurst</groupId>
+			<artifactId>wiremock</artifactId>
+			<version>${wiremock.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -136,16 +206,16 @@
 						</goals>
 						<configuration>
 							<inputSpec>
-								${project.basedir}/src/main/resources/openapi/openapi.yaml
-							</inputSpec>
+								${project.basedir}/src/main/resources/openapi/openapi.yaml</inputSpec>
 							<generatorName>spring</generatorName>
 							<apiPackage>com.bcp.bootcamp.controller</apiPackage>
 							<modelPackage>com.bcp.bootcamp.dto</modelPackage>
+							<supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
 							<configOptions>
-								<useLombok>true</useLombok>
-								<reactive>true</reactive>
 								<delegatePattern>true</delegatePattern>
+								<reactive>true</reactive>
 							</configOptions>
+							<enablePostProcessFile>true</enablePostProcessFile>
 						</configuration>
 					</execution>
 				</executions>
@@ -162,6 +232,35 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>${sonar-maven-plugin.version}</version>
+			</plugin>
+
+			<!-- JaCoCo Cobertura -->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco-maven-plugin.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<!-- attached to Maven test phase -->
+					<execution>
+						<id>report</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 	</build>
 	<repositories>

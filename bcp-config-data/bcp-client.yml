@@ -19,7 +19,13 @@ springdoc:
   swagger-ui:
     path: /swagger-ui.html
   packages-to-exclude:
-    - com.bcp.bootcamp
+    - com.bcp.bootcamp.controller
+
+logging:
+  level:
+    root: INFO
+    com.alea: DEBUG
+    org.springframework.boot: INFO
 
 ## CORS ORIGIN
 cors:

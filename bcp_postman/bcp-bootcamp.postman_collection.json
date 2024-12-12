@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "b8418346-304a-4b46-8c4a-712b0da01094",
+		"name": "bcp-bootcamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11063231"
+	},
+	"item": [
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "client-natural",
+					"item": []
+				},
+				{
+					"name": "client-negocio",
+					"item": [
+						{
+							"name": "save",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"demo.ce.unsch@gmail.com\",\r\n  \"address\": \"jr. los incas 123\",\r\n  \"phoneNumber\": \"987654321\",\r\n  \"businessName\": \"Tiendas Carsa sac\",\r\n  \"ruc\": \"20232425263\",\r\n  \"sector\": \"electrodomesticos\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:9082/bcp-client/api/v1/customer-busineses"
+							},
+							"response": []
+						},
+						{
+							"name": "findByRuc",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

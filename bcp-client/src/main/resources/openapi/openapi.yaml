@@ -36,6 +36,51 @@ paths:
                 $ref: '#/components/schemas/NaturalCustomerDTO'
         '404':
           description: cliente natural no encontrada
+  /api/v1/customer-naturals/search/{dni}:
+    get:
+      summary: Obtener cliente natural por dni
+      tags: 
+        - CustomerNaturalController
+      description: Obtener cliente natural por dni.
+      operationId: findByDniCustomerNatural
+      parameters:
+        - in: path
+          name: dni
+          required: true
+          schema:
+            type: string
+          description: dni del cliente natural
+      responses:
+        '200':
+          description: Cliente natural encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NaturalCustomerDTO'
+        '404':
+          description: cliente natural no encontrada
+  /api/v1/customer-naturals:
+    post:
+      summary: Registrar cliente natural
+      tags: 
+        - CustomerNaturalController
+      description: Obtener cliente natural por id.
+      operationId: saveNatural
+      requestBody:
+        description: Datos del cliente
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NaturalCustomerDTO'
+      responses:
+        '200':
+          description: Cliente natural registrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NaturalCustomerDTO'
+        '500':
+          description: error interno del servidor
   /api/v1/customer-busineses/{id}:
     get:
       summary: Obtener cliente empresarial por id
@@ -59,6 +104,51 @@ paths:
                 $ref: '#/components/schemas/BusinessCustomerDTO'
         '404':
           description: cliente natural no encontrada
+  /api/v1/customer-busineses/search/{dni}:
+    get:
+      summary: Obtener cliente de negocio por dni
+      tags: 
+        - CustomerBusinessController
+      description: Obtener cliente negocio por dni.
+      operationId: findByDniCustomerBusineses
+      parameters:
+        - in: path
+          name: dni
+          required: true
+          schema:
+            type: string
+          description: dni del cliente negocio
+      responses:
+        '200':
+          description: Cliente negocio encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessCustomerDTO'
+        '404':
+          description: cliente natural no encontrada
+  /api/v1/customer-busineses:
+    post:
+      summary: Registrar cliente negocio
+      tags: 
+        - CustomerBusinessController
+      description: Obtener cliente negocio por id.
+      operationId: saveBusineses
+      requestBody:
+        description: Datos del cliente
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessCustomerDTO'
+      responses:
+        '200':
+          description: Cliente natural registrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BusinessCustomerDTO'
+        '500':
+          description: error interno del servidor
 components:
   schemas:
     NaturalCustomerDTO:
@@ -70,6 +160,9 @@ components:
         email:
           type: string
           description: correo del cliente
+        dni:
+          type: string
+          description: dni del cliente
         address:
           type: string
           description: dirección del cliente
