@@ -1,0 +1,194 @@
+openapi: 3.0.3
+info:
+  title: Banco API
+  version: 1.0.0
+  description: Proyecto BootCamp 57 - banco apis
+  contact:
+    email: ctc.tucno@gmail.com
+
+tags:
+  - name: ProductoController
+    description: Gestionar los controladores de los clientes naturales
+  - name: BankAccountController
+    description: Gestionar de las cuentas bancarias
+
+paths:
+  /api/v1/products/{id}:
+    get:
+      summary: Obtener cliente de negocio por id
+      tags: 
+        - ProductoController
+      description: Obtener cliente negocio por dni.
+      operationId: findByIdProduct
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: id del producto
+      responses:
+        '200':
+          description: datos del producto
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductDTO'
+        '404':
+          description: producto no encontrada
+  /api/v1/products/findAll:
+    get:
+      summary: Obtener lista de productos
+      tags: 
+        - ProductoController
+      description: Obtener los productos
+      operationId: findAllProduct
+      responses:
+        '200':
+          description: datos del producto
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProductDTO'
+        '404':
+          description: producto no encontrada
+  /api/v1/products:
+    post:
+      summary: Registrar producto
+      tags: 
+        - ProductoController
+      description: registrar producto.
+      operationId: saveProduct
+      requestBody:
+        description: Datos del prodcuto
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductDTO'
+      responses:
+        '200':
+          description: producto registrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductDTO'
+        '500':
+          description: error interno del servidor
+  /api/v1/products/update/{id}:
+    put:
+      summary: actualizar producto
+      tags: 
+        - ProductoController
+      description: actualizar producto.
+      operationId: updateProduct
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: id del producto
+      requestBody:
+        description: Datos del producto
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductDTO'
+      responses:
+        '200':
+          description: producto registrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductDTO'
+        '500':
+          description: error interno del servidor
+  /api/v1/products/delete/{id}:
+    delete:
+      summary: eliminar producto
+      tags: 
+        - ProductoController
+      description: eliminar producto.
+      operationId: deleteProduct
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: id del producto
+      responses:
+        '200':
+          description: producto eliminado
+          content:
+            application/json: {}
+        '500':
+          description: error interno del servidor
+  /api/v1/bank-accounts:
+    post:
+      summary: Registrar cuentas bancarias
+      tags: 
+        - BankAccountController
+      description: registrar producto.
+      operationId: saveBankAccount
+      requestBody:
+        description: Datos del producto y cuenta bancaria
+        content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BankAccountDTO'
+      responses:
+        '200':
+          description: cuenta registrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BankAccountDTO'
+        '500':
+          description: error interno del servidor
+components:
+  schemas:
+    ProductDTO:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Identificador único del producto
+        name:
+          type: string
+          description: nombre del producto
+        type:
+          type: string
+          description: tipo del producto
+      required:
+        - id
+        - name
+        - type
+    BankAccountDTO:
+      type: object
+      properties:
+        id:
+          type: string
+          description: "The unique identifier of the bank account."
+        name:
+          type: string
+          description: "The name associated with the bank account."
+        balance:
+          type: number
+          format: double
+          description: "The balance of the bank account."
+        comissionManager:
+          type: boolean
+          description: "Indicates if the account has a commission manager."
+        limitMovement:
+          type: number
+          format: double
+          description: "The movement limit for the bank account."
+        documentNumber:
+          type: string
+          description: "The document number associated with the bank account."
+        product:
+          $ref: '#/components/schemas/ProductDTO'
+          description: "The product associated with the bank account."

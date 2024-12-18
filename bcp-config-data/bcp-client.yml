@@ -26,6 +26,9 @@ logging:
     root: INFO
     com.alea: DEBUG
     org.springframework.boot: INFO
+  file:
+    name: logs/bcp-client.log
+    path: ./logs
 
 ## CORS ORIGIN
 cors:

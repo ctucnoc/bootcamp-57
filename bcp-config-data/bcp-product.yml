@@ -11,6 +11,33 @@ spring:
       database: bd_product
       host: localhost
       port: 27017
+      
+## Configuración de open api
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+  packages-to-exclude:
+    - com.bcp.bootcamp.controller
+
+logging:
+  level:
+    root: INFO
+    com.alea: DEBUG
+    org.springframework.boot: INFO
+
+## CORS ORIGIN
+cors:
+  mapping: "/**"
+  allowed-origins: http://localhost:4200, http://localhost:80
+  allowed-methods: GET, POST, PATCH, PUT, DELETE, OPTIONS, HEAD
+  allowed-head: "*"
+  
+## Configuración del Reactive Feign clients
+feign:
+  bcp-client:
+    name: bcp-client
 
 eureka:
    instance:

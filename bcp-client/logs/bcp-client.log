@@ -1,0 +1,463 @@
+2024-12-13T12:03:28.445-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.bcp.bootcamp.BcpClientApplication    : Starting BcpClientApplication using Java 21.0.1 with PID 23892 (C:\Users\crist\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\proyecto-nttdata\bootcamp-57\bcp-client\target\classes started by crist in C:\Users\crist\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\proyecto-nttdata\bootcamp-57\bcp-client)
+2024-12-13T12:03:28.447-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.bcp.bootcamp.BcpClientApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-12-13T12:03:28.476-05:00  INFO 23892 --- [bcp-client] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:9080
+2024-12-13T12:03:28.476-05:00  INFO 23892 --- [bcp-client] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=bcp-client, profiles=[default], label=null, version=null, state=null
+2024-12-13T12:03:28.478-05:00  INFO 23892 --- [bcp-client] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-13T12:03:28.478-05:00  INFO 23892 --- [bcp-client] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-13T12:03:29.244-05:00  INFO 23892 --- [bcp-client] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-12-13T12:03:29.332-05:00  INFO 23892 --- [bcp-client] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 3 Reactive MongoDB repository interfaces.
+2024-12-13T12:03:29.498-05:00  INFO 23892 --- [bcp-client] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e67fc902-f09f-315f-84c2-cc4cec1b8445
+2024-12-13T12:03:29.893-05:00  INFO 23892 --- [bcp-client] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.1+12-29"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@7aae4098, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@6f833f28], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@7b922a36, com.mongodb.Jep395RecordCodecProvider@458b85e0, com.mongodb.KotlinCodecProvider@4d29b749]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@3b25abbb], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2024-12-13T12:03:29.976-05:00  INFO 23892 --- [bcp-client] [cluster-ClusterId{value='675c68e1f9c9817a8c2ae33d', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=43002700, minRoundTripTimeNanos=0}
+2024-12-13T12:03:30.032-05:00  WARN 23892 --- [bcp-client] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-12-13T12:03:30.714-05:00  INFO 23892 --- [bcp-client] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-13T12:03:30.932-05:00  INFO 23892 --- [bcp-client] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2024-12-13T12:03:30.957-05:00  WARN 23892 --- [bcp-client] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-13T12:03:31.011-05:00  INFO 23892 --- [bcp-client] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-13T12:03:31.029-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-13T12:03:31.033-05:00  INFO 23892 --- [bcp-client] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T12:03:31.038-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-13T12:03:31.038-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-13T12:03:31.039-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-13T12:03:31.039-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-13T12:03:31.039-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-13T12:03:31.039-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-13T12:03:31.039-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-13T12:03:31.193-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-13T12:03:31.194-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-13T12:03:31.195-05:00  INFO 23892 --- [bcp-client] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-13T12:03:31.196-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1734109411196 with initial instances count: 0
+2024-12-13T12:03:31.200-05:00  INFO 23892 --- [bcp-client] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BCP-CLIENT with eureka with status UP
+2024-12-13T12:03:31.200-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1734109411200, current=UP, previous=STARTING]
+2024-12-13T12:03:31.202-05:00  INFO 23892 --- [bcp-client] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092: registering service...
+2024-12-13T12:03:31.235-05:00  INFO 23892 --- [bcp-client] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092 - registration status: 204
+2024-12-13T12:03:31.242-05:00  INFO 23892 --- [bcp-client] [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9092 (http)
+2024-12-13T12:03:31.243-05:00  INFO 23892 --- [bcp-client] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9092
+2024-12-13T12:03:31.256-05:00  INFO 23892 --- [bcp-client] [restartedMain] com.bcp.bootcamp.BcpClientApplication    : Started BcpClientApplication in 3.535 seconds (process running for 4.225)
+2024-12-13T12:04:01.204-05:00  INFO 23892 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-13T12:04:01.204-05:00  INFO 23892 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-13T12:04:01.205-05:00  INFO 23892 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-13T12:04:01.205-05:00  INFO 23892 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-13T12:04:01.205-05:00  INFO 23892 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-13T12:04:01.205-05:00  INFO 23892 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2024-12-13T12:04:01.205-05:00  INFO 23892 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-13T12:04:01.231-05:00  INFO 23892 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-13T12:04:16.480-05:00  INFO 23892 --- [bcp-client] [reactor-http-nio-2] reactor.Mono.MapFuseable.1               : | onSubscribe([Fuseable] FluxMapFuseable.MapFuseableSubscriber)
+2024-12-13T12:04:16.481-05:00  INFO 23892 --- [bcp-client] [reactor-http-nio-2] reactor.Mono.MapFuseable.1               : | request(unbounded)
+2024-12-13T12:04:16.551-05:00  INFO 23892 --- [bcp-client] [nioEventLoopGroup-3-3] c.b.b.s.impl.CustomerNaturalServiceImpl  : save customer natural -> {} Customer(id=675c6910f9c9817a8c2ae33e, nombre=gallo, direccion=aso. los incas 321, telefono=986544622, email=gallo.demo@gmail.com)
+2024-12-13T12:04:16.559-05:00  INFO 23892 --- [bcp-client] [nioEventLoopGroup-3-3] reactor.Mono.MapFuseable.1               : | onNext(<201 CREATED Created,class NaturalCustomerDTO {
+    id: 675c6910f9c9817a8c2ae33f
+    email: null
+    dni: null
+    address: aso. los incas 321
+    phoneNumber: 986544622
+    name: gallo
+    fullName: unsch gallito
+    genero: masculino
+},[]>)
+2024-12-13T12:04:16.568-05:00  INFO 23892 --- [bcp-client] [nioEventLoopGroup-3-3] reactor.Mono.MapFuseable.1               : | onComplete()
+2024-12-13T12:05:21.861-05:00  INFO 23892 --- [bcp-client] [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-12-13T12:05:21.862-05:00  INFO 23892 --- [bcp-client] [RMI TCP Connection(13)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BCP-CLIENT with eureka with status DOWN
+2024-12-13T12:05:21.862-05:00  INFO 23892 --- [bcp-client] [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1734109521862, current=DOWN, previous=UP]
+2024-12-13T12:05:21.862-05:00  INFO 23892 --- [bcp-client] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092: registering service...
+2024-12-13T12:05:21.863-05:00  INFO 23892 --- [bcp-client] [RMI TCP Connection(13)-127.0.0.1] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-13T12:05:21.865-05:00  INFO 23892 --- [bcp-client] [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2024-12-13T12:05:21.874-05:00  INFO 23892 --- [bcp-client] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092 - registration status: 204
+2024-12-13T12:05:23.944-05:00  INFO 23892 --- [bcp-client] [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-12-13T12:05:26.952-05:00  INFO 23892 --- [bcp-client] [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-12-13T12:05:26.985-05:00  INFO 23892 --- [bcp-client] [RMI TCP Connection(13)-127.0.0.1] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:689)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:574)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:532)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:806)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:784)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.cancel(RestClientEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:667)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:624)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1363)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:583)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1356)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:568)
+	... 70 more
+
+2024-12-13T12:05:26.986-05:00  WARN 23892 --- [bcp-client] [RMI TCP Connection(13)-127.0.0.1] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+2024-12-13T12:05:27.015-05:00  INFO 23892 --- [bcp-client] [RMI TCP Connection(13)-127.0.0.1] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.createResourceAccessException(DefaultRestClient.java:689)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:574)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchange(DefaultRestClient.java:532)
+	at org.springframework.web.client.RestClient$RequestHeadersSpec.exchange(RestClient.java:677)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.executeAndExtract(DefaultRestClient.java:806)
+	at org.springframework.web.client.DefaultRestClient$DefaultResponseSpec.toBodilessEntity(DefaultRestClient.java:784)
+	at org.springframework.cloud.netflix.eureka.http.RestClientEurekaHttpClient.cancel(RestClientEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:667)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:624)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1363)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:583)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1356)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193)
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115)
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52)
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236)
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138)
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252)
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803)
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405)
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:117)
+	at org.springframework.cloud.netflix.eureka.http.RestClientTransportClientFactory.lambda$newClient$2(RestClientTransportClientFactory.java:98)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.DefaultRestClient$DefaultRequestBodyUriSpec.exchangeInternal(DefaultRestClient.java:568)
+	... 71 more
+
+2024-12-13T12:05:27.016-05:00  WARN 23892 --- [bcp-client] [RMI TCP Connection(13)-127.0.0.1] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+2024-12-13T12:05:27.016-05:00 ERROR 23892 --- [bcp-client] [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919) ~[eureka-client-2.0.4.jar:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900) ~[eureka-client-2.0.4.jar:2.0.4]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.2.0-RC1.jar:4.2.0-RC1]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.2.0-RC1.jar:4.2.0-RC1]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:667) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:624) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1363) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:583) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1356) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1219) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1180) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1126) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown(SpringApplicationAdminMXBeanRegistrar.java:160) ~[spring-boot-3.4.0.jar:3.4.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at sun.reflect.misc.Trampoline.invoke(MethodUtil.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.base/sun.reflect.misc.MethodUtil.invoke(MethodUtil.java:97) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:193) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.ConvertingMethod.invokeWithOpenReturn(ConvertingMethod.java:175) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:115) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MXBeanIntrospector.invokeM2(MXBeanIntrospector.java:52) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MBeanIntrospector.invokeM(MBeanIntrospector.java:236) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.PerInterface.invoke(PerInterface.java:138) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.MBeanSupport.invoke(MBeanSupport.java:252) ~[na:na]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:803) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:714) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:598) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:844) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:721) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:720) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2024-12-13T12:05:27.019-05:00  INFO 23892 --- [bcp-client] [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2024-12-13T16:10:46.246-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.bcp.bootcamp.BcpClientApplication    : Starting BcpClientApplication using Java 21.0.1 with PID 28628 (C:\Users\crist\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\proyecto-nttdata\bootcamp-57\bcp-client\target\classes started by crist in C:\Users\crist\Documents\workspace-spring-tool-suite-4-4.22.0.RELEASE\proyecto-nttdata\bootcamp-57\bcp-client)
+2024-12-13T16:10:46.248-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.bcp.bootcamp.BcpClientApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-12-13T16:10:46.284-05:00  INFO 28628 --- [bcp-client] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:9080
+2024-12-13T16:10:46.284-05:00  INFO 28628 --- [bcp-client] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=bcp-client, profiles=[default], label=null, version=null, state=null
+2024-12-13T16:10:46.285-05:00  INFO 28628 --- [bcp-client] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-13T16:10:46.286-05:00  INFO 28628 --- [bcp-client] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-13T16:10:47.088-05:00  INFO 28628 --- [bcp-client] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2024-12-13T16:10:47.176-05:00  INFO 28628 --- [bcp-client] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 3 Reactive MongoDB repository interfaces.
+2024-12-13T16:10:47.350-05:00  INFO 28628 --- [bcp-client] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e67fc902-f09f-315f-84c2-cc4cec1b8445
+2024-12-13T16:10:47.759-05:00  INFO 28628 --- [bcp-client] [restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "5.2.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.1+12-29"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=NettyTransportSettings{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@21540d81, socketChannelClass=null, allocator=null, sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@27f73250], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@52358bf7, com.mongodb.Jep395RecordCodecProvider@76349117, com.mongodb.KotlinCodecProvider@778db255]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@69f66b46], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2024-12-13T16:10:47.831-05:00  INFO 28628 --- [bcp-client] [cluster-ClusterId{value='675ca2d7169c7809695366f1', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=46139100, minRoundTripTimeNanos=0}
+2024-12-13T16:10:47.885-05:00  WARN 28628 --- [bcp-client] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-12-13T16:10:48.595-05:00  INFO 28628 --- [bcp-client] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-12-13T16:10:48.806-05:00  INFO 28628 --- [bcp-client] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2024-12-13T16:10:48.828-05:00  WARN 28628 --- [bcp-client] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-13T16:10:48.881-05:00  INFO 28628 --- [bcp-client] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-13T16:10:48.898-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-13T16:10:48.902-05:00  INFO 28628 --- [bcp-client] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T16:10:48.908-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-13T16:10:48.908-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-13T16:10:48.908-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-13T16:10:48.908-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-13T16:10:48.908-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-13T16:10:48.908-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-13T16:10:48.908-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-13T16:10:49.071-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-13T16:10:49.073-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-13T16:10:49.075-05:00  INFO 28628 --- [bcp-client] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-13T16:10:49.076-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1734124249075 with initial instances count: 0
+2024-12-13T16:10:49.078-05:00  INFO 28628 --- [bcp-client] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BCP-CLIENT with eureka with status UP
+2024-12-13T16:10:49.078-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1734124249078, current=UP, previous=STARTING]
+2024-12-13T16:10:49.080-05:00  INFO 28628 --- [bcp-client] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092: registering service...
+2024-12-13T16:10:49.120-05:00  INFO 28628 --- [bcp-client] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092 - registration status: 204
+2024-12-13T16:10:49.134-05:00  INFO 28628 --- [bcp-client] [restartedMain] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 9092 (http)
+2024-12-13T16:10:49.135-05:00  INFO 28628 --- [bcp-client] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9092
+2024-12-13T16:10:49.149-05:00  INFO 28628 --- [bcp-client] [restartedMain] com.bcp.bootcamp.BcpClientApplication    : Started BcpClientApplication in 3.565 seconds (process running for 4.292)
+2024-12-13T16:11:19.089-05:00  INFO 28628 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-13T16:11:19.089-05:00  INFO 28628 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-13T16:11:19.090-05:00  INFO 28628 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-13T16:11:19.090-05:00  INFO 28628 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-13T16:11:19.090-05:00  INFO 28628 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-13T16:11:19.090-05:00  INFO 28628 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2024-12-13T16:11:19.090-05:00  INFO 28628 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-13T16:11:19.111-05:00  INFO 28628 --- [bcp-client] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-13T16:15:48.923-05:00  INFO 28628 --- [bcp-client] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T16:16:57.917-05:00  INFO 28628 --- [bcp-client] [reactor-http-nio-2] reactor.Mono.MapFuseable.1               : | onSubscribe([Fuseable] FluxMapFuseable.MapFuseableSubscriber)
+2024-12-13T16:16:57.917-05:00  INFO 28628 --- [bcp-client] [reactor-http-nio-2] reactor.Mono.MapFuseable.1               : | request(unbounded)
+2024-12-13T16:16:57.997-05:00  INFO 28628 --- [bcp-client] [nioEventLoopGroup-3-3] c.b.b.s.impl.CustomerNaturalServiceImpl  : save customer natural -> {} Customer(id=675ca449169c7809695366f2, nombre=gallo, direccion=aso. los incas 321, telefono=986544622, email=dddd.demo@gmail.com)
+2024-12-13T16:16:58.007-05:00  INFO 28628 --- [bcp-client] [nioEventLoopGroup-3-3] reactor.Mono.MapFuseable.1               : | onNext(<201 CREATED Created,class NaturalCustomerDTO {
+    id: 675ca44a169c7809695366f3
+    email: null
+    dni: null
+    address: aso. los incas 321
+    phoneNumber: 986544622
+    name: gallo
+    fullName: unsch gallito
+    genero: masculino
+},[]>)
+2024-12-13T16:16:58.018-05:00  INFO 28628 --- [bcp-client] [nioEventLoopGroup-3-3] reactor.Mono.MapFuseable.1               : | onComplete()
+2024-12-13T16:18:04.005-05:00  INFO 28628 --- [bcp-client] [reactor-http-nio-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 73 ms
+2024-12-13T16:18:55.366-05:00  INFO 28628 --- [bcp-client] [reactor-http-nio-5] reactor.Mono.Map.2                       : onSubscribe(FluxMap.MapSubscriber)
+2024-12-13T16:18:55.366-05:00  INFO 28628 --- [bcp-client] [reactor-http-nio-5] reactor.Mono.Map.3                       : onSubscribe(FluxMap.MapSubscriber)
+2024-12-13T16:18:55.366-05:00  INFO 28628 --- [bcp-client] [reactor-http-nio-5] reactor.Mono.Map.3                       : request(unbounded)
+2024-12-13T16:18:55.366-05:00  INFO 28628 --- [bcp-client] [reactor-http-nio-5] reactor.Mono.Map.2                       : request(unbounded)
+2024-12-13T16:18:55.404-05:00  INFO 28628 --- [bcp-client] [nioEventLoopGroup-3-3] c.b.b.s.i.CustomerBusinesesServiceImpl   : findbyRuc busineses -> {} CustomerBusineses(id=6759f1b603136c5d50321665, customer=Customer(id=6759f1b603136c5d50321664, nombre=Tiendas sac, direccion=asoc. la victoria mz ñ lt 13, telefono=98704567, email=demo.unsch@gmail.com), ruc=20232425262, sector=abarrotes)
+2024-12-13T16:18:55.404-05:00  INFO 28628 --- [bcp-client] [nioEventLoopGroup-3-3] reactor.Mono.Map.2                       : onNext(class BusinessCustomerDTO {
+    id: 6759f1b603136c5d50321665
+    email: demo.unsch@gmail.com
+    address: null
+    phoneNumber: null
+    businessName: Tiendas sac
+    ruc: 20232425262
+    sector: abarrotes
+})
+2024-12-13T16:18:55.404-05:00  INFO 28628 --- [bcp-client] [nioEventLoopGroup-3-3] reactor.Mono.Map.3                       : onNext(<200 OK OK,class BusinessCustomerDTO {
+    id: 6759f1b603136c5d50321665
+    email: demo.unsch@gmail.com
+    address: null
+    phoneNumber: null
+    businessName: Tiendas sac
+    ruc: 20232425262
+    sector: abarrotes
+},[]>)
+2024-12-13T16:18:55.406-05:00  INFO 28628 --- [bcp-client] [nioEventLoopGroup-3-3] reactor.Mono.Map.2                       : onComplete()
+2024-12-13T16:18:55.406-05:00  INFO 28628 --- [bcp-client] [nioEventLoopGroup-3-3] reactor.Mono.Map.3                       : onComplete()
+2024-12-13T16:20:48.930-05:00  INFO 28628 --- [bcp-client] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T16:25:46.926-05:00  INFO 28628 --- [bcp-client] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T16:30:46.932-05:00  INFO 28628 --- [bcp-client] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T16:35:46.945-05:00  INFO 28628 --- [bcp-client] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T16:40:46.960-05:00  INFO 28628 --- [bcp-client] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T16:45:46.971-05:00  INFO 28628 --- [bcp-client] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T16:50:46.987-05:00  INFO 28628 --- [bcp-client] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T17:10:43.950-05:00  INFO 28628 --- [bcp-client] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T17:15:43.962-05:00  INFO 28628 --- [bcp-client] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T17:20:43.972-05:00  INFO 28628 --- [bcp-client] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T17:25:43.986-05:00  INFO 28628 --- [bcp-client] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-13T17:28:55.355-05:00  INFO 28628 --- [bcp-client] [RMI TCP Connection(75)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-12-13T17:28:55.358-05:00  INFO 28628 --- [bcp-client] [RMI TCP Connection(75)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BCP-CLIENT with eureka with status DOWN
+2024-12-13T17:28:55.358-05:00  INFO 28628 --- [bcp-client] [RMI TCP Connection(75)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1734128935358, current=DOWN, previous=UP]
+2024-12-13T17:28:55.359-05:00  INFO 28628 --- [bcp-client] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092: registering service...
+2024-12-13T17:28:55.367-05:00  INFO 28628 --- [bcp-client] [RMI TCP Connection(75)-127.0.0.1] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-13T17:28:55.370-05:00  INFO 28628 --- [bcp-client] [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2024-12-13T17:28:55.383-05:00  INFO 28628 --- [bcp-client] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092 - registration status: 204
+2024-12-13T17:28:57.461-05:00  INFO 28628 --- [bcp-client] [RMI TCP Connection(75)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2024-12-13T17:29:00.466-05:00  INFO 28628 --- [bcp-client] [RMI TCP Connection(75)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2024-12-13T17:29:00.485-05:00  INFO 28628 --- [bcp-client] [RMI TCP Connection(75)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BCP-CLIENT/ctucnoc.mshome.net:bcp-client:9092 - deregister  status: 200
+2024-12-13T17:29:00.486-05:00  INFO 28628 --- [bcp-client] [RMI TCP Connection(75)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

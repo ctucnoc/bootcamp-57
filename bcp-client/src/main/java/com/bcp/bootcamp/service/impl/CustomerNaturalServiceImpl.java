@@ -7,8 +7,11 @@ import com.bcp.bootcamp.dto.NaturalCustomerDTO;
 import com.bcp.bootcamp.repository.ICustomerNaturalRepository;
 import com.bcp.bootcamp.repository.ICustomerRepository;
 import com.bcp.bootcamp.service.ICustomerNaturalService;
+
+import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Mono;
 
+@Slf4j
 @Service
 public class CustomerNaturalServiceImpl implements ICustomerNaturalService {
 	
@@ -27,13 +30,14 @@ public class CustomerNaturalServiceImpl implements ICustomerNaturalService {
 	@Override
 	public Mono<NaturalCustomerDTO> save(NaturalCustomerDTO customer) {
 		return customerRepository.save(convertToBeanCustomer(customer))
+				.doOnNext(x -> log.info("save customer natural -> {} "+x.toString()))
 		.flatMap(bean -> {
 			CustomerNatural customerNatural = new CustomerNatural();
 			customerNatural.setCustomer(bean);
 			customerNatural.setApellido(customer.getFullName());
 			customerNatural.setGenero(customer.getGenero());
 			return customerNaturalRepository.save(customerNatural)
-					.map(natural -> convertToBean(natural));
+					.map(this::convertToBean);
 		});
 	}
 	

@@ -34,6 +34,12 @@ spring:
         - Path=/bcp-client/**
         filters:         
         - RewritePath=/bcp-client/(?<path>.*), /$\{path}
+      - id: id-bcp-product
+        uri: lb://BCP-PRODUCT
+        predicates:
+        - Path=/bcp-product/**
+        filters:         
+        - RewritePath=/bcp-product/(?<path>.*), /$\{path}
         
 # Activacion de endpoints         
 management:
